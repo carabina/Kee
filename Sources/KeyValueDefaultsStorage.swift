@@ -61,7 +61,7 @@ open class KeyValueDefaultsStorage: KeyValueStorage {
         return value
     }
     
-    open func removeAllKeys() {
+    open func removeAllKeys() throws {
         
         if let suiteName = suiteName {
             defaults.removeSuite(named: suiteName)

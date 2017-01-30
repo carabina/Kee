@@ -19,23 +19,38 @@
 //    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import Foundation
+import KeychainAccess
 
-public enum KeyValueStorageError: Error {
+open class KeyValueKeychainStorage: KeyValueStorage {
     
-    case type(reason: String)
-}
+    private let keychain = Keychain(service: "com")
+    
+    // MARK: - KeyValueStorage
+    
+    open func set(value: Any?, forKey key: String) throws {
+        
+        if let value = value {
+            
+            let data = NSKeyedArchiver.archivedData(withRootObject: value)
+            try keychain.set(data, key: key)
+            
+        } else {
+            try keychain.remove(key)
+        }
+    }
+    
+    open func value<T>(forKey key: String) throws -> T? {
+        
+        guard let data = try keychain.getData(key)
+            else { return nil }
+        guard let value = NSKeyedUnarchiver.unarchiveObject(with: data) as? T
+            else { throw KeyValueStorageError.type(reason: "Cannot convert unarchived object to given type: \(T.self)") }
+        
+        return value
+    }
+    
+    open func removeAllKeys() throws {
 
-public protocol KeyValueStorage {
-    
-    @discardableResult
-    func set(value: Any?, forKey key: String) throws
-    
-    func value<T>(forKey key: String) throws -> T?
-    
-    func removeAllKeys() throws
-}
-
-public protocol KeyValueObjectStorage {
-    
-
+        try keychain.removeAll()
+    }
 }

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45BDAD088C59D001967D35CE /* Pods_KeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10304056A72399253405EA35 /* Pods_KeeTests.framework */; };
+		51475736A2A26DFF9A3909DC /* Pods_Kee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969CEFFB99EF11136A200D2F /* Pods_Kee.framework */; };
 		DA731F1B1E3FBDB700B82859 /* Kee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA731F111E3FBDB700B82859 /* Kee.framework */; };
 		DA731F301E3FBF3800B82859 /* Kee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA731F2F1E3FBF3800B82859 /* Kee.swift */; };
 		DA731F361E3FBF9800B82859 /* KeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA731F341E3FBF9400B82859 /* KeeTests.swift */; };
 		DA731F391E3FC15000B82859 /* KeyValueDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA731F381E3FC15000B82859 /* KeyValueDefaultsStorage.swift */; };
+		DA731F3B1E3FC71A00B82859 /* KeyValueKeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA731F3A1E3FC71A00B82859 /* KeyValueKeychainStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +27,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0843AFEE6E81968F9AEAA6A6 /* Pods-Kee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kee/Pods-Kee.debug.xcconfig"; sourceTree = "<group>"; };
+		10304056A72399253405EA35 /* Pods_KeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238D1BAF73CABB5CEEDB0B14 /* Pods-KeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeeTests/Pods-KeeTests.release.xcconfig"; sourceTree = "<group>"; };
+		969CEFFB99EF11136A200D2F /* Pods_Kee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0CE7EB29DB451459383C17 /* Pods-KeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeeTests/Pods-KeeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D46FDBB030698470D5B134F7 /* Pods-Kee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kee/Pods-Kee.release.xcconfig"; sourceTree = "<group>"; };
 		DA731F111E3FBDB700B82859 /* Kee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA731F1A1E3FBDB700B82859 /* KeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA731F2D1E3FBF1600B82859 /* Kee.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Kee.plist; sourceTree = "<group>"; };
@@ -31,6 +40,7 @@
 		DA731F321E3FBF8D00B82859 /* KeeTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KeeTests.plist; sourceTree = "<group>"; };
 		DA731F341E3FBF9400B82859 /* KeeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeeTests.swift; sourceTree = "<group>"; };
 		DA731F381E3FC15000B82859 /* KeyValueDefaultsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueDefaultsStorage.swift; sourceTree = "<group>"; };
+		DA731F3A1E3FC71A00B82859 /* KeyValueKeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueKeychainStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51475736A2A26DFF9A3909DC /* Pods_Kee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,12 +57,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA731F1B1E3FBDB700B82859 /* Kee.framework in Frameworks */,
+				45BDAD088C59D001967D35CE /* Pods_KeeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45F5B1730B6C733C553CAC31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				969CEFFB99EF11136A200D2F /* Pods_Kee.framework */,
+				10304056A72399253405EA35 /* Pods_KeeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA731F071E3FBDB700B82859 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +80,8 @@
 				DA731F2C1E3FBF0900B82859 /* Sources */,
 				DA731F311E3FBF6A00B82859 /* Tests */,
 				DA731F121E3FBDB700B82859 /* Products */,
+				ECEAD2EE3B9AECC22862C2C6 /* Pods */,
+				45F5B1730B6C733C553CAC31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +108,7 @@
 			children = (
 				DA731F2F1E3FBF3800B82859 /* Kee.swift */,
 				DA731F381E3FC15000B82859 /* KeyValueDefaultsStorage.swift */,
+				DA731F3A1E3FC71A00B82859 /* KeyValueKeychainStorage.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -95,6 +119,17 @@
 				DA731F341E3FBF9400B82859 /* KeeTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		ECEAD2EE3B9AECC22862C2C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0843AFEE6E81968F9AEAA6A6 /* Pods-Kee.debug.xcconfig */,
+				D46FDBB030698470D5B134F7 /* Pods-Kee.release.xcconfig */,
+				9F0CE7EB29DB451459383C17 /* Pods-KeeTests.debug.xcconfig */,
+				238D1BAF73CABB5CEEDB0B14 /* Pods-KeeTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,10 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA731F251E3FBDB700B82859 /* Build configuration list for PBXNativeTarget "Kee" */;
 			buildPhases = (
+				9D9C6D9597B5FECBDC03289E /* [CP] Check Pods Manifest.lock */,
 				DA731F0C1E3FBDB700B82859 /* Sources */,
 				DA731F0D1E3FBDB700B82859 /* Frameworks */,
 				DA731F0E1E3FBDB700B82859 /* Headers */,
 				DA731F0F1E3FBDB700B82859 /* Resources */,
+				3629074943C0086CCD6A0EE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA731F281E3FBDB700B82859 /* Build configuration list for PBXNativeTarget "KeeTests" */;
 			buildPhases = (
+				C30DC8971814FF6F6B0B7AB9 /* [CP] Check Pods Manifest.lock */,
 				DA731F161E3FBDB700B82859 /* Sources */,
 				DA731F171E3FBDB700B82859 /* Frameworks */,
 				DA731F181E3FBDB700B82859 /* Resources */,
+				0939216468B77C22149D0605 /* [CP] Embed Pods Frameworks */,
+				413F657477BE81D8667CCA0A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +242,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0939216468B77C22149D0605 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeeTests/Pods-KeeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3629074943C0086CCD6A0EE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kee/Pods-Kee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		413F657477BE81D8667CCA0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeeTests/Pods-KeeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D9C6D9597B5FECBDC03289E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C30DC8971814FF6F6B0B7AB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA731F0C1E3FBDB700B82859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -209,6 +327,7 @@
 			files = (
 				DA731F301E3FBF3800B82859 /* Kee.swift in Sources */,
 				DA731F391E3FC15000B82859 /* KeyValueDefaultsStorage.swift in Sources */,
+				DA731F3B1E3FC71A00B82859 /* KeyValueKeychainStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +451,7 @@
 		};
 		DA731F261E3FBDB700B82859 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0843AFEE6E81968F9AEAA6A6 /* Pods-Kee.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -354,6 +474,7 @@
 		};
 		DA731F271E3FBDB700B82859 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46FDBB030698470D5B134F7 /* Pods-Kee.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -375,6 +496,7 @@
 		};
 		DA731F291E3FBDB700B82859 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F0CE7EB29DB451459383C17 /* Pods-KeeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Configs/KeeTests.plist;
@@ -387,6 +509,7 @@
 		};
 		DA731F2A1E3FBDB700B82859 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 238D1BAF73CABB5CEEDB0B14 /* Pods-KeeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Configs/KeeTests.plist;
