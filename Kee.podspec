@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
     s.name                  = 'Kee'
     s.module_name           = 'Kee'
 
-    s.version               = '1.0.0'
+    s.version               = '0.0.1'
 
     s.homepage              = 'https://github.com/maxsokolov/Kee'
     s.summary               = 'Generic key value storage.'
