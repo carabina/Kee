@@ -20,7 +20,7 @@
 
 import Foundation
 
-open class KeyValueDefaultsStorage: KeyValueStorage {
+public final class KeyValueDefaultsStorage: KeyValueStorage {
     
     private let defaults: UserDefaults
     private let suiteName: String?
@@ -37,7 +37,7 @@ open class KeyValueDefaultsStorage: KeyValueStorage {
     
     // MARK: - KeyValueStorage
     
-    open func set(value: Any?, forKey key: String) throws {
+    public func set(value: Any?, forKey key: String) throws {
         
         if let value = value {
             
@@ -51,7 +51,7 @@ open class KeyValueDefaultsStorage: KeyValueStorage {
         defaults.synchronize()
     }
     
-    open func value<T>(forKey key: String) throws -> T? {
+    public func value<T>(forKey key: String) throws -> T? {
         
         guard let data = defaults.object(forKey: key) as? Data else { return nil }
         
@@ -61,7 +61,7 @@ open class KeyValueDefaultsStorage: KeyValueStorage {
         return value
     }
     
-    open func removeAllKeys() throws {
+    public func removeAllKeys() throws {
         
         if let suiteName = suiteName {
             defaults.removeSuite(named: suiteName)

@@ -21,13 +21,18 @@
 import Foundation
 import KeychainAccess
 
-open class KeyValueKeychainStorage: KeyValueStorage {
+public final class KeyValueKeychainStorage: KeyValueStorage {
     
-    private let keychain = Keychain(service: "com")
+    private let keychain: Keychain
+    
+    public init(service: String, accessibility: Accessibility = .afterFirstUnlock) {
+        
+        keychain = Keychain(service: service).accessibility(accessibility)
+    }
     
     // MARK: - KeyValueStorage
     
-    open func set(value: Any?, forKey key: String) throws {
+    public func set(value: Any?, forKey key: String) throws {
         
         if let value = value {
             
@@ -39,7 +44,7 @@ open class KeyValueKeychainStorage: KeyValueStorage {
         }
     }
     
-    open func value<T>(forKey key: String) throws -> T? {
+    public func value<T>(forKey key: String) throws -> T? {
         
         guard let data = try keychain.getData(key)
             else { return nil }
@@ -49,7 +54,7 @@ open class KeyValueKeychainStorage: KeyValueStorage {
         return value
     }
     
-    open func removeAllKeys() throws {
+    public func removeAllKeys() throws {
 
         try keychain.removeAll()
     }
