@@ -25,17 +25,28 @@ public enum KeyValueStorageError: Error {
     case type(reason: String)
 }
 
+public typealias KeyValueRepresentation = [String: Any]
+
+public protocol KeyValueRepresentable {
+    
+    var keyValueRepresentation: KeyValueRepresentation { get }
+    
+    init(keyValueRepresentation: KeyValueRepresentation) throws
+}
+
 public protocol KeyValueStorage {
     
     @discardableResult
-    func set(value: Any?, forKey key: String) throws
+    func setValue(_ value: Any?, forKey key: String) throws
     
-    func value<T>(forKey key: String) throws -> T?
+    func getValue<T>(forKey key: String) throws -> T?
     
     func removeAllKeys() throws
 }
 
 public protocol KeyValueObjectStorage {
     
-
+    func setObject(_ object: KeyValueRepresentable?, forKey key: String) throws
+    
+    func getObject<T: KeyValueRepresentable>(forKey key: String) throws -> T?
 }

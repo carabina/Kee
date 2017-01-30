@@ -32,7 +32,7 @@ public final class KeyValueKeychainStorage: KeyValueStorage {
     
     // MARK: - KeyValueStorage
     
-    public func set(value: Any?, forKey key: String) throws {
+    public func setValue(_ value: Any?, forKey key: String) throws {
         
         if let value = value {
             
@@ -44,7 +44,7 @@ public final class KeyValueKeychainStorage: KeyValueStorage {
         }
     }
     
-    public func value<T>(forKey key: String) throws -> T? {
+    public func getValue<T>(forKey key: String) throws -> T? {
         
         guard let data = try keychain.getData(key)
             else { return nil }

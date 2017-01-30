@@ -20,7 +20,7 @@
 
 import Foundation
 
-public final class KeyValueDefaultsStorage: KeyValueStorage {
+public final class KeyValueDefaultsStorage: KeyValueStorage, KeyValueObjectStorage {
     
     private let defaults: UserDefaults
     private let suiteName: String?
@@ -37,7 +37,7 @@ public final class KeyValueDefaultsStorage: KeyValueStorage {
     
     // MARK: - KeyValueStorage
     
-    public func set(value: Any?, forKey key: String) throws {
+    public func setValue(_ value: Any?, forKey key: String) throws {
         
         if let value = value {
             
@@ -51,7 +51,7 @@ public final class KeyValueDefaultsStorage: KeyValueStorage {
         defaults.synchronize()
     }
     
-    public func value<T>(forKey key: String) throws -> T? {
+    public func getValue<T>(forKey key: String) throws -> T? {
         
         guard let data = defaults.object(forKey: key) as? Data else { return nil }
         
@@ -72,5 +72,19 @@ public final class KeyValueDefaultsStorage: KeyValueStorage {
         }
         
         defaults.synchronize()
+    }
+    
+    // MARK: - KeyValueObjectStorage
+    
+    public func setObject(_ object: KeyValueRepresentable?, forKey key: String) throws {
+        
+        try setValue(object?.keyValueRepresentation, forKey: key)
+    }
+    
+    public func getObject<T: KeyValueRepresentable>(forKey key: String) throws -> T? {
+        
+        guard let value: [String: Any] = try getValue(forKey: key) else { return nil }
+        
+        return try T(keyValueRepresentation: value)
     }
 }
