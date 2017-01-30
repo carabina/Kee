@@ -10,6 +10,7 @@
 		DA731F1B1E3FBDB700B82859 /* Kee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA731F111E3FBDB700B82859 /* Kee.framework */; };
 		DA731F301E3FBF3800B82859 /* Kee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA731F2F1E3FBF3800B82859 /* Kee.swift */; };
 		DA731F361E3FBF9800B82859 /* KeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA731F341E3FBF9400B82859 /* KeeTests.swift */; };
+		DA731F391E3FC15000B82859 /* KeyValueDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA731F381E3FC15000B82859 /* KeyValueDefaultsStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		DA731F2F1E3FBF3800B82859 /* Kee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kee.swift; sourceTree = "<group>"; };
 		DA731F321E3FBF8D00B82859 /* KeeTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KeeTests.plist; sourceTree = "<group>"; };
 		DA731F341E3FBF9400B82859 /* KeeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeeTests.swift; sourceTree = "<group>"; };
+		DA731F381E3FC15000B82859 /* KeyValueDefaultsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueDefaultsStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				DA731F2F1E3FBF3800B82859 /* Kee.swift */,
+				DA731F381E3FC15000B82859 /* KeyValueDefaultsStorage.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA731F301E3FBF3800B82859 /* Kee.swift in Sources */,
+				DA731F391E3FC15000B82859 /* KeyValueDefaultsStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
